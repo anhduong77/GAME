@@ -25,7 +25,7 @@ public class UI {
         this.gp = gp;
         arial_40 = new Font("Arial", Font.PLAIN, 40);
         arial_80B = new Font("Arial", Font.BOLD, 80);
-        OBJ_Key key = new OBJ_Key();
+        OBJ_Key key = new OBJ_Key(gp);
         keyImage = key.image;
     }
 
@@ -50,7 +50,7 @@ public class UI {
             y = gp.screenHeight / 2 - (gp.tileSize * 3);
             g2.drawString(text, x, y);
 
-            text = "Your Time is:" + dFormat.format(playTime) + "!";
+            text = "Your Time is: " + dFormat.format(playTime) + "!";
             textLength = (int) g2.getFontMetrics().getStringBounds(text, g2).getWidth();
             x = gp.screenWidth / 2 - textLength / 2;
             y = gp.screenHeight / 2 + (gp.tileSize * 4);
